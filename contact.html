@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Mama T's Creations. We'd love to hear from you — questions, custom order inquiries, or just to say hello." />
+  <title>Contact | Mama T's Creations</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <header id="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><span class="logo-text">Mama T's Creations</span></a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="custom-orders.html">Custom Orders</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-accent">We'd Love to Hear from You</p>
+      <h1>Contact Us</h1>
+      <p>Questions, ideas, or just want to say hello? We're here.</p>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact-section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>We typically respond within 24–48 hours. For custom orders, please use the <a href="custom-orders.html">Custom Order Form</a> for fastest response.</p>
+
+          <div class="contact-details">
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <!-- UPDATE: Replace with Mama T's real email -->
+                <p><a href="mailto:tsmith64068@hotmail.com">tsmith64068@hotmail.com</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fab fa-instagram"></i>
+              </div>
+              <div>
+                <h4>Instagram</h4>
+                <!-- UPDATE: Replace with real Instagram handle -->
+                <p><a href="https://instagram.com/tsmith64068" target="_blank">@tsmith64068</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fab fa-facebook-f"></i>
+              </div>
+              <div>
+                <h4>Facebook</h4>
+                <!-- UPDATE: Replace with real Facebook page -->
+                <p><a href="#" target="_blank">Mama T's Creations</a></p>
+              </div>
+            </div>
+
+            <div class="contact-detail-item">
+              <div class="contact-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h4>Response Time</h4>
+                <p>Within 24–48 hours<br/>Monday – Saturday</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social quick links -->
+          <div class="contact-social">
+            <p>Follow us for new creations and updates:</p>
+            <div class="social-icons">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://instagram.com/tsmith64068" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send a Message</h2>
+
+          <!--
+            Replace https://formspree.io/f/mvzjgejw with your Formspree contact form endpoint
+            This can be a separate form from the order form
+          -->
+          <form
+            class="contact-form"
+            action="https://formspree.io/f/mvzjgejw"
+            method="POST"
+          >
+            <input type="hidden" name="_subject" value="New Message — Mama T's Creations Website" />
+            <input type="hidden" name="_next" value="thank-you.html" />
+
+            <div class="form-group">
+              <label for="contact-name">Your Name <span class="required-star">*</span></label>
+              <input type="text" id="contact-name" name="name" placeholder="Your full name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email">Email Address <span class="required-star">*</span></label>
+              <input type="email" id="contact-email" name="email" placeholder="your@email.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject">Subject</label>
+              <select id="contact-subject" name="subject">
+                <option value="" disabled selected>— What is this about? —</option>
+                <option value="Custom Order Question">Custom Order Question</option>
+                <option value="Order Status">Order Status</option>
+                <option value="Product Question">Product Question</option>
+                <option value="Shipping Question">Shipping Question</option>
+                <option value="Pricing Question">Pricing Question</option>
+                <option value="Wholesale / Bulk Order">Wholesale / Bulk Order</option>
+                <option value="General Hello">General Hello</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message <span class="required-star">*</span></label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="5"
+                placeholder="Tell us what's on your mind..."
+                required
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Mama T's Creations</span>
+          <p>Created with Love. Guided by Faith.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-policies">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/tsmith64068" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- TikTok and Pinterest links to be added when accounts are confirmed -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mama T's Creations. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> and Faith.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

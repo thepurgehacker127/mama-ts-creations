@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- ========== META & SEO ========== -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Start your custom order at Mama T's Creations. Request a custom shirt, tumbler, coffee cup, or faith-based gift made just for you." />
+  <title>Custom Orders | Mama T's Creations</title>
+
+  <!-- ========== GOOGLE FONTS ========== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- ========== FONT AWESOME ========== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- ========== MAIN STYLESHEET ========== -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ========== HEADER / NAVIGATION ========== -->
+  <header id="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html">
+          <span class="logo-text">Mama T's Creations</span>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="custom-orders.html">Custom Orders</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ========== PAGE HERO ========== -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-accent">Let's Create Something Special</p>
+      <h1>Start Your Custom Order</h1>
+      <p>Fill out the form below and we'll reach out within 24–48 hours with your design preview and pricing.</p>
+    </div>
+  </section>
+
+  <!-- ========== HOW IT WORKS MINI STEPS ========== -->
+  <section id="order-steps">
+    <div class="container">
+      <div class="mini-steps">
+
+        <div class="mini-step">
+          <div class="mini-step-icon">
+            <i class="fas fa-pencil-alt"></i>
+          </div>
+          <div class="mini-step-text">
+            <h4>1. Fill Out the Form</h4>
+            <p>Tell us what you want — product, colors, text, size, and any special details.</p>
+          </div>
+        </div>
+
+        <div class="mini-step-divider"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="mini-step">
+          <div class="mini-step-icon">
+            <i class="fas fa-paint-brush"></i>
+          </div>
+          <div class="mini-step-text">
+            <h4>2. We Design It</h4>
+            <p>We create your design and send you a preview before anything is made.</p>
+          </div>
+        </div>
+
+        <div class="mini-step-divider"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="mini-step">
+          <div class="mini-step-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="mini-step-text">
+            <h4>3. You Approve</h4>
+            <p>You review the design, request changes, and approve before we start making it.</p>
+          </div>
+        </div>
+
+        <div class="mini-step-divider"><i class="fas fa-chevron-right"></i></div>
+
+        <div class="mini-step">
+          <div class="mini-step-icon">
+            <i class="fas fa-box"></i>
+          </div>
+          <div class="mini-step-text">
+            <h4>4. Receive It</h4>
+            <p>Your custom creation is made with love and shipped right to your door.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CUSTOM ORDER FORM ========== -->
+  <section id="order-form-section">
+    <div class="container">
+      <div class="form-wrapper">
+
+        <div class="form-intro">
+          <h2>Tell Us About Your Order</h2>
+          <p>The more detail you give us, the better we can bring your vision to life. All fields marked <span class="required-star">*</span> are required.</p>
+        </div>
+
+        <!-- 
+          IMPORTANT: Replace https://formspree.io/f/mvzjgejw below with your actual
+          Formspree endpoint, e.g. https://formspree.io/f/mvzjgejw
+        -->
+        <form
+          class="order-form"
+          action="https://formspree.io/f/mvzjgejw"
+          method="POST"
+        >
+
+          <!-- Hidden field to identify this as a custom order -->
+          <input type="hidden" name="_subject" value="New Custom Order Request — Mama T's Creations" />
+          <input type="hidden" name="_next" value="thank-you.html" />
+
+          <!-- ===== CONTACT INFORMATION ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-user"></i> Your Contact Information</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name <span class="required-star">*</span></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first_name"
+                  placeholder="Your first name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name <span class="required-star">*</span></label>
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last_name"
+                  placeholder="Your last name"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email Address <span class="required-star">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(555) 000-0000"
+                />
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ===== PRODUCT SELECTION ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-box-open"></i> Product Details</legend>
+
+            <div class="form-group">
+              <label for="product-type">What product are you ordering? <span class="required-star">*</span></label>
+              <select id="product-type" name="product_type" required>
+                <option value="" disabled selected>— Select a product —</option>
+                <option value="Custom T-Shirt">Custom T-Shirt</option>
+                <option value="Coffee Mug">Coffee Mug</option>
+                <option value="Glitter Tumbler">Glitter Tumbler</option>
+                <option value="Epoxy Tumbler">Epoxy Tumbler</option>
+                <option value="Faith-Based Gift">Faith-Based Gift</option>
+                <option value="Personalized Gift">Personalized Gift</option>
+                <option value="Seasonal Item">Seasonal Item</option>
+                <option value="Gift Set">Gift Set</option>
+                <option value="Other / Not Sure">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="quantity">Quantity <span class="required-star">*</span></label>
+                <input
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  min="1"
+                  placeholder="How many?"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="size">Size (if applicable)</label>
+                <select id="size" name="size">
+                  <option value="" disabled selected>— Select size —</option>
+                  <option value="XS">XS</option>
+                  <option value="S">S</option>
+                  <option value="M">M</option>
+                  <option value="L">L</option>
+                  <option value="XL">XL</option>
+                  <option value="2XL">2XL</option>
+                  <option value="3XL">3XL</option>
+                  <option value="N/A">N/A — Not a shirt</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="colors">Preferred Colors <span class="required-star">*</span></label>
+              <input
+                type="text"
+                id="colors"
+                name="colors"
+                placeholder="e.g. Black shirt with gold lettering, sky blue background"
+                required
+              />
+            </div>
+
+          </fieldset>
+
+          <!-- ===== DESIGN DETAILS ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-paint-brush"></i> Design Details</legend>
+
+            <div class="form-group">
+              <label for="custom-text">Text to include on your item <span class="required-star">*</span></label>
+              <textarea
+                id="custom-text"
+                name="custom_text"
+                rows="3"
+                placeholder="e.g. 'Blessed & Grateful' — John 3:16 — or any names, dates, quotes you want included"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="design-style">Design Style / Vibe</label>
+              <select id="design-style" name="design_style">
+                <option value="" disabled selected>— Choose a style —</option>
+                <option value="Faith / Scripture">Faith / Scripture</option>
+                <option value="Elegant / Classy">Elegant / Classy</option>
+                <option value="Bold / Bright">Bold / Bright</option>
+                <option value="Simple / Minimalist">Simple / Minimalist</option>
+                <option value="Floral / Feminine">Floral / Feminine</option>
+                <option value="Fun / Playful">Fun / Playful</option>
+                <option value="Holiday / Seasonal">Holiday / Seasonal</option>
+                <option value="No Preference">No Preference — Surprise Me</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="design-notes">Additional Design Notes</label>
+              <textarea
+                id="design-notes"
+                name="design_notes"
+                rows="4"
+                placeholder="Any other details? Reference photos you love, fonts you like, things to avoid, specific placement, etc."
+              ></textarea>
+            </div>
+
+          </fieldset>
+
+          <!-- ===== OCCASION / TIMING ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-calendar-alt"></i> Occasion & Timing</legend>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="occasion">What is this for?</label>
+                <select id="occasion" name="occasion">
+                  <option value="" disabled selected>— Select occasion —</option>
+                  <option value="Birthday">Birthday</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Wedding">Wedding</option>
+                  <option value="Baby Shower">Baby Shower</option>
+                  <option value="Graduation">Graduation</option>
+                  <option value="Church / Ministry">Church / Ministry</option>
+                  <option value="Holiday Gift">Holiday Gift</option>
+                  <option value="Just Because">Just Because</option>
+                  <option value="Business / Promo">Business / Promo</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="needed-by">When do you need it by?</label>
+                <input
+                  type="date"
+                  id="needed-by"
+                  name="needed_by"
+                />
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ===== PAYMENT PREFERENCE ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-credit-card"></i> Payment Preference</legend>
+
+            <div class="form-group">
+              <label>How would you prefer to pay?</label>
+              <div class="checkbox-group">
+                <label class="checkbox-label">
+                  <input type="radio" name="payment_method" value="PayPal" /> PayPal
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="payment_method" value="Cash App" /> Cash App
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="payment_method" value="Stripe / Card" /> Credit / Debit Card
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="payment_method" value="Zelle" /> Zelle
+                </label>
+                <label class="checkbox-label">
+                  <input type="radio" name="payment_method" value="No Preference" /> No Preference
+                </label>
+              </div>
+            </div>
+
+          </fieldset>
+
+          <!-- ===== HOW DID YOU HEAR ABOUT US ===== -->
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-star"></i> One Last Thing</legend>
+
+            <div class="form-group">
+              <label for="referral">How did you hear about Mama T's Creations?</label>
+              <select id="referral" name="referral">
+                <option value="" disabled selected>— Select one —</option>
+                <option value="Instagram">Instagram</option>
+                <option value="Facebook">Facebook</option>
+                <option value="TikTok">TikTok</option>
+                <option value="Word of Mouth">Word of Mouth / Friend</option>
+                <option value="Google">Google Search</option>
+                <option value="Pinterest">Pinterest</option>
+                <option value="Returning Customer">I'm a Returning Customer</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <!-- ===== SUBMIT BUTTON ===== -->
+          <div class="form-submit">
+            <p class="form-note">
+              <i class="fas fa-lock"></i>
+              Your information is never sold or shared. We'll respond within 24–48 hours.
+            </p>
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Submit My Order Request
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST STRIP ========== -->
+  <section id="trust-strip">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <i class="fas fa-shield-alt"></i>
+          <p>Secure & Private</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-clock"></i>
+          <p>24–48 Hour Response</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-eye"></i>
+          <p>Preview Before We Make It</p>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-heart"></i>
+          <p>Made with Love & Faith</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="logo-text">Mama T's Creations</span>
+          <p>Created with Love. Guided by Faith.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="custom-orders.html">Custom Orders</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-policies">
+          <h4>Policies</h4>
+          <ul>
+            <li><a href="shipping-policy.html">Shipping Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/tsmith64068" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <!-- TikTok and Pinterest links to be added when accounts are confirmed -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mama T's Creations. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart"></i> and Faith.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
