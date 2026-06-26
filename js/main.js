@@ -108,3 +108,46 @@ if (yearEl) {
     new Date().getFullYear()
   );
 }
+/* ========== SMOOTH BACK TO TOP ========== */
+// Creates a back-to-top button that appears when scrolling down
+const backToTop = document.createElement('button');
+backToTop.innerHTML = '<i class="fas fa-arrow-up"></i>';
+backToTop.className = 'back-to-top';
+backToTop.setAttribute('aria-label', 'Back to top');
+document.body.appendChild(backToTop);
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 400) {
+    backToTop.classList.add('visible');
+  } else {
+    backToTop.classList.remove('visible');
+  }
+});
+
+backToTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+/* ========== ACTIVE NAV HIGHLIGHT ON SCROLL ========== */
+// Highlights shop filter buttons when their section is in view
+const filterBtns = document.querySelectorAll('.filter-btn');
+const shopSections = document.querySelectorAll('.shop-section');
+
+if (filterBtns.length && shopSections.length) {
+  window.addEventListener('scroll', () => {
+    let current = '';
+    shopSections.forEach(section => {
+      const sectionTop = section.offsetTop - 140;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    filterBtns.forEach(btn => {
+      btn.classList.remove('active');
+      if (btn.getAttribute('href') === `#${current}`) {
+        btn.classList.add('active');
+      }
+    });
+  });
+}
