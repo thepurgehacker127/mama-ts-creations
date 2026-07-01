@@ -13,7 +13,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Shop | Mama T's Creations" />
   <meta property="og:description" content="Custom printed & painted shirts, tumblers, cups, hats, plates, socks, bags and more. Made just for you." />
   <meta property="og:url" content="https://thepurgehacker127.github.io/mama-ts-creations/shop.html" />
@@ -23,13 +22,10 @@
 
 <body>
 
-  <!-- ========== HEADER / NAVIGATION ========== -->
   <header id="main-header">
     <nav class="navbar">
       <div class="nav-logo">
-        <a href="index.html">
-          <span class="logo-text">Mama T's Creations</span>
-        </a>
+        <a href="index.html"><span class="logo-text">Mama T's Creations</span></a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -44,7 +40,6 @@
     </nav>
   </header>
 
-  <!-- ========== PAGE HERO ========== -->
   <section class="page-hero">
     <div class="page-hero-content">
       <p class="hero-accent">Handmade with Heart</p>
@@ -53,7 +48,6 @@
     </div>
   </section>
 
-  <!-- ========== SHOP CATEGORY NAV ========== -->
   <section id="shop-nav">
     <div class="container">
       <div class="shop-filter-bar">
@@ -77,189 +71,85 @@
         <p>Choose between our hand-painted and printed styles — or get both on the same shirt for the best value.</p>
       </div>
 
-      <!-- Pricing highlight bar -->
-       <!-- Painted Shirt -->
+      <div class="pricing-highlight-bar">
+        <div class="price-pill">
+          <i class="fas fa-print"></i>
+          <span>Printed Shirts</span>
+          <strong>$25</strong>
+        </div>
+        <div class="price-pill">
+          <i class="fas fa-paint-brush"></i>
+          <span>Painted Shirts</span>
+          <strong>$30</strong>
+        </div>
+        <div class="price-pill best-value">
+          <i class="fas fa-star"></i>
+          <span>Printed + Painted</span>
+          <strong>$27</strong>
+          <span class="best-value-tag">Best Value</span>
+        </div>
+      </div>
+
+      <div class="product-grid">
+
         <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-20.jpg" alt="Hand painted highland cow sunflower shirt" class="product-img" loading="lazy" />
-          </div>
-
-Card 3 — Printed + Painted Combo
-Find:
-html        <!-- Printed + Painted Combo -->
-        <div class="product-card product-card-featured">
-          <div class="product-featured-ribbon">Best Value</div>
-          <div class="product-image-placeholder">
-            <i class="fas fa-tshirt"></i>
-          </div>
-Replace with:
-html        <!-- Printed + Painted Combo -->
-        <div class="product-card product-card-featured">
-          <div class="product-featured-ribbon">Best Value</div>
-          <div class="product-img-wrap">
-            <img src="assets/images/product-21.jpg" alt="Blue paw print shirt and daisy tumbler set" class="product-img" loading="lazy" />
-          </div>
-
-Drinkware Section — 3 replacements
-Card 1 — Coffee Cup
-Find:
-html        <!-- Coffee Cup -->
-        <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-mug-hot"></i>
-          </div>
-Replace with:
-html        <!-- Coffee Cup -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-coffee-cup.svg" alt="Custom coffee cup" class="product-img" loading="lazy" />
-          </div>
-
-Card 2 — 40oz Tumbler
-Find:
-html        <!-- 40oz Tumbler -->
-        <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-wine-bottle"></i>
-          </div>
-Replace with:
-html        <!-- 40oz Tumbler -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <img src="assets/images/product-19.jpg" alt="Blue 40oz custom tumbler with book floral design" class="product-img" loading="lazy" />
-          </div>
-
-Card 3 — Leak Proof Tumbler
-Find:
-html        <!-- Leak Proof Tumbler -->
-        <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-tint-slash"></i>
-          </div>
-Replace with:
-html        <!-- Leak Proof Tumbler -->
-        <div class="product-card">
-          <div class="product-img-wrap">
-            <img src="assets/images/product-02.jpg" alt="Black daisy leak proof tumbler" class="product-img" loading="lazy" />
-          </div>
-
-Hats Section — 3 replacements
-All three hat cards, replace each:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-hat-cowboy"></i>
-          </div>
-With:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-hat.svg" alt="Custom hat" class="product-img" loading="lazy" />
-          </div>
-Also replace the group hat card:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-users"></i>
-          </div>
-With:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-hat.svg" alt="Group event custom hats" class="product-img" loading="lazy" />
-          </div>
-
-Plates Section — 3 replacements
-Replace all three:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-circle"></i>
-          </div>
-html          <div class="product-image-placeholder">
-            <i class="fas fa-cross"></i>
-          </div>
-html          <div class="product-image-placeholder">
-            <i class="fas fa-baby"></i>
-          </div>
-All with:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-plate.svg" alt="Custom decorative plate" class="product-img" loading="lazy" />
-          </div>
-
-Socks Section — 3 replacements
-Replace all three sock card placeholders:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-socks"></i>
-          </div>
-html          <div class="product-image-placeholder">
-            <i class="fas fa-gift"></i>
-          </div>
-All with:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-socks.svg" alt="Custom socks" class="product-img" loading="lazy" />
-          </div>
-
-Bags Section — 3 replacements
-Card 1 — Custom Bag (real photo)
-Find:
-html        <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-shopping-bag"></i>
+            <img src="assets/images/shirt-waymaker.jpg" alt="Custom printed Waymaker faith shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
-            <h3>Custom Personalized Bag</h3>
-Replace with:
-html        <div class="product-card">
+            <h3>Custom Printed T-Shirt</h3>
+            <p>Your design, scripture, name, or phrase professionally printed on a quality shirt in your chosen color and size.</p>
+            <div class="product-details">
+              <span class="product-tag">Printed Design</span>
+              <span class="product-tag">All Sizes</span>
+              <span class="product-tag">All Colors</span>
+            </div>
+            <p class="product-price">$25</p>
+            <a href="custom-orders.html" class="btn btn-primary">Request Custom Order</a>
+          </div>
+        </div>
+
+        <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-14.jpg" alt="Strawberry Shortcake custom tote bag" class="product-img" loading="lazy" />
+            <img src="assets/images/shirt-paw-heart-tiedye.jpg" alt="Hand painted paw print heart tie-dye shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
-            <h3>Custom Personalized Bag</h3>
-Cards 2 & 3 — Faith Tote and Group Bags
-Find:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-cross"></i>
+            <h3>Custom Hand-Painted T-Shirt</h3>
+            <p>One-of-a-kind hand-painted designs applied directly to your shirt. No two are ever exactly alike — truly unique.</p>
+            <div class="product-details">
+              <span class="product-tag">Hand Painted</span>
+              <span class="product-tag">Unique</span>
+              <span class="product-tag">All Sizes</span>
+            </div>
+            <p class="product-price">$30</p>
+            <a href="custom-orders.html" class="btn btn-primary">Request Custom Order</a>
           </div>
-          <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
-            <h3>Faith Tote Bag</h3>
-Replace with:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-socks.svg" alt="Faith tote bag" class="product-img" loading="lazy" />
-          </div>
-          <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
-            <h3>Faith Tote Bag</h3>
-Find:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-users"></i>
-          </div>
-          <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-users"></i> Group Orders</span>
-            <h3>Event & Group Bags</h3>
-Replace with:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-socks.svg" alt="Event group bags" class="product-img" loading="lazy" />
-          </div>
-          <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-users"></i> Group Orders</span>
-            <h3>Event & Group Bags</h3>
+        </div>
 
-Polo Shirts Section — 3 replacements
-Replace all three polo placeholders:
-html          <div class="product-image-placeholder">
-            <i class="fas fa-tshirt"></i>
+        <div class="product-card product-card-featured">
+          <div class="product-featured-ribbon">Best Value</div>
+          <div class="product-img-wrap">
+            <img src="assets/images/shirt-sisters.jpg" alt="Custom printed Sisters quote shirt" class="product-img" loading="lazy" />
           </div>
-html          <div class="product-image-placeholder">
-            <i class="fas fa-church"></i>
+          <div class="product-info">
+            <span class="custom-badge"><i class="fas fa-star"></i> Most Popular</span>
+            <h3>Printed + Painted Combo Shirt</h3>
+            <p>Get the best of both worlds — printed and hand-painted on the same shirt for one incredible price. The ultimate custom creation.</p>
+            <div class="product-details">
+              <span class="product-tag">Print + Paint</span>
+              <span class="product-tag">All Sizes</span>
+              <span class="product-tag">Best Value</span>
+            </div>
+            <p class="product-price">$27 <span class="price-note">(saves vs. separate)</span></p>
+            <a href="custom-orders.html" class="btn btn-primary">Request Custom Order</a>
           </div>
-html          <div class="product-image-placeholder">
-            <i class="fas fa-briefcase"></i>
-          </div>
-All with:
-html          <div class="product-img-wrap">
-            <img src="assets/images/placeholder-polo.svg" alt="Custom polo shirt" class="product-img" loading="lazy" />
-          </div>
+        </div>
 
-Now add 3 more real photo cards to the T-Shirts section
-Find the closing </div> of the shirts product grid — right before </div></div></section> at the end of the shirts section — and add these 3 cards inside the .product-grid div:
-html        <!-- Faith Shirt Examples -->
         <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-18.jpg" alt="Trusting Jesus faith transfer shirt" class="product-img" loading="lazy" />
+            <img src="assets/images/shirt-faith-transfers.jpg" alt="Trusting Jesus faith transfer shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -276,12 +166,12 @@ html        <!-- Faith Shirt Examples -->
 
         <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-09.jpg" alt="Light blue paw print heart shirt" class="product-img" loading="lazy" />
+            <img src="assets/images/shirt-curvy-girl.jpg" alt="Custom Curvy Girl quote shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
             <h3>Custom Graphic Shirt</h3>
-            <p>Your chosen graphic, design, or artwork printed on a quality shirt in your color and size.</p>
+            <p>Your chosen graphic, quote, or artwork printed on a quality shirt in your color and size.</p>
             <div class="product-details">
               <span class="product-tag">Graphic Print</span>
               <span class="product-tag">All Colors</span>
@@ -294,7 +184,7 @@ html        <!-- Faith Shirt Examples -->
 
         <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-13.jpg" alt="White Jesus portrait custom shirt" class="product-img" loading="lazy" />
+            <img src="assets/images/shirt-jesus-lion-portrait.jpg" alt="Jesus and lion faith portrait shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -310,51 +200,17 @@ html        <!-- Faith Shirt Examples -->
           </div>
         </div>
 
-Push it live
-bashcd ~/Projects/mama-ts-creations
-git add .
-git commit -m "Replace all shop placeholders with real product photos and branded SVGs"
-git push origin main
-
-✅ What shop.html now shows:
-
-T-Shirts: 6 cards — Waymaker faith shirt, highland cow painted shirt, paw print combo shot, faith transfer, graphic paw print, Jesus portrait ✅
-Drinkware: Coffee cup placeholder, blue 40oz tumbler real photo, black daisy tumbler real photo ✅
-Hats, Plates, Polos: Clean navy/gold branded SVG placeholders ✅
-Bags: Real Strawberry Shortcake tote bag photo on card 1 ✅
-Socks: Branded placeholders ✅
-All images zoom on hover ✅
-
-
-When the shop looks correct in Live Server, reply exactly:
-STEP COMPLETEYou said: write the whole shop.write the whole shop.html so i can just cope and place replacing this script6:54 AM        <div class="price-pill">
-          <i class="fas fa-paint-brush"></i>
-          <span>Painted Shirts</span>
-          <strong>$30</strong>
-        </div>
-        <div class="price-pill best-value">
-          <i class="fas fa-star"></i>
-          <span>Printed + Painted</span>
-          <strong>$27</strong>
-          <span class="best-value-tag">Best Value</span>
-        </div>
-      </div>
-
-      <div class="product-grid">
-
-        <!-- Printed Shirt -->
-        <!-- Printed Shirt -->
         <div class="product-card">
           <div class="product-img-wrap">
-            <img src="assets/images/product-03.jpg" alt="Custom printed Waymaker faith shirt" class="product-img" loading="lazy" />
+            <img src="assets/images/shirt-family-photo-collage.jpg" alt="Custom family photo collage shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
-            <h3>Custom Printed T-Shirt</h3>
-            <p>Your design, scripture, name, or phrase professionally printed on a quality shirt in your chosen color and size.</p>
+            <span class="custom-badge"><i class="fas fa-camera"></i> Your Photos</span>
+            <h3>Custom Family Photo Shirt</h3>
+            <p>Turn your favorite family photos into a custom shirt. Multiple photos, names, dates — all in one beautiful design.</p>
             <div class="product-details">
-              <span class="product-tag">Printed Design</span>
-              <span class="product-tag">All Sizes</span>
+              <span class="product-tag">Photo Print</span>
+              <span class="product-tag">Family</span>
               <span class="product-tag">All Colors</span>
             </div>
             <p class="product-price">$25</p>
@@ -362,41 +218,38 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
           </div>
         </div>
 
-        <!-- Painted Shirt -->
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-tshirt"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/shirt-dog-dad.jpg" alt="Custom pet photo print shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
-            <h3>Custom Hand-Painted T-Shirt</h3>
-            <p>One-of-a-kind hand-painted designs applied directly to your shirt. No two are ever exactly alike — truly unique.</p>
+            <span class="custom-badge"><i class="fas fa-paw"></i> Pet Lovers</span>
+            <h3>Custom Pet Photo Shirt</h3>
+            <p>Your fur baby printed on a quality shirt. Dog moms, dog dads, cat lovers — we print your pet in perfect detail.</p>
             <div class="product-details">
-              <span class="product-tag">Hand Painted</span>
-              <span class="product-tag">Unique</span>
+              <span class="product-tag">Pet Photo</span>
               <span class="product-tag">All Sizes</span>
+              <span class="product-tag">Any Color</span>
             </div>
-            <p class="product-price">$30</p>
+            <p class="product-price">$25</p>
             <a href="custom-orders.html" class="btn btn-primary">Request Custom Order</a>
           </div>
         </div>
 
-        <!-- Printed + Painted Combo -->
-        <div class="product-card product-card-featured">
-          <div class="product-featured-ribbon">Best Value</div>
-          <div class="product-image-placeholder">
-            <i class="fas fa-tshirt"></i>
+        <div class="product-card">
+          <div class="product-img-wrap">
+            <img src="assets/images/shirt-god-breaks-plans.jpg" alt="Sometimes God breaks your plans faith shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
-            <span class="custom-badge"><i class="fas fa-star"></i> Most Popular</span>
-            <h3>Printed + Painted Combo Shirt</h3>
-            <p>Get the best of both worlds — printed and hand-painted on the same shirt for one incredible price. The ultimate custom creation.</p>
+            <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
+            <h3>Custom Faith Message Shirt</h3>
+            <p>Powerful faith messages and spiritual artwork printed on premium shirts. Bold, beautiful, and meaningful.</p>
             <div class="product-details">
-              <span class="product-tag">Print + Paint</span>
+              <span class="product-tag">Faith</span>
+              <span class="product-tag">Spiritual</span>
               <span class="product-tag">All Sizes</span>
-              <span class="product-tag">Best Value</span>
             </div>
-            <p class="product-price">$27 <span class="price-note">(saves vs. separate)</span></p>
+            <p class="product-price">$25</p>
             <a href="custom-orders.html" class="btn btn-primary">Request Custom Order</a>
           </div>
         </div>
@@ -434,10 +287,9 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
 
       <div class="product-grid">
 
-        <!-- Coffee Cup -->
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-mug-hot"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-coffee-cup.svg" alt="Custom coffee cup" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -452,10 +304,9 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
           </div>
         </div>
 
-        <!-- 40oz Tumbler -->
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-wine-bottle"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/tumbler-faith-god-is-good.jpg" alt="God is Good All the Time custom faith tumbler" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -471,10 +322,9 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
           </div>
         </div>
 
-        <!-- Leak Proof Tumbler -->
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-tint-slash"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/tumbler-black-daisy.jpg" alt="Black daisy leak proof custom tumbler" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -505,8 +355,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
       <div class="product-grid">
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-hat-cowboy"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-hat.svg" alt="Custom hat" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -523,8 +373,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-hat-cowboy"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-hat.svg" alt="Faith based custom hat" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -540,8 +390,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-users"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-hat.svg" alt="Group event custom hats" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-users"></i> Group Orders</span>
@@ -572,8 +422,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
       <div class="product-grid">
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-circle"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-plate.svg" alt="Custom decorative plate" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -590,8 +440,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-cross"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-plate.svg" alt="Faith scripture plate" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -608,8 +458,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-baby"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-plate.svg" alt="Baby and milestone plate" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-gift"></i> Gift Idea</span>
@@ -640,8 +490,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
       <div class="product-grid">
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-socks"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/bag-socks-strawberry-shortcake.jpg" alt="Custom Strawberry Shortcake socks and matching tote bag" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -658,8 +508,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-socks"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-socks.svg" alt="Faith and scripture socks" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -676,8 +526,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-gift"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-socks.svg" alt="Socks and shirt bundle" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-star"></i> Best Add-On</span>
@@ -708,8 +558,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
       <div class="product-grid">
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-shopping-bag"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/bag-socks-strawberry-shortcake.jpg" alt="Strawberry Shortcake custom tote bag" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -726,8 +576,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-cross"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-socks.svg" alt="Faith tote bag" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -744,8 +594,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-users"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-socks.svg" alt="Event and group bags" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-users"></i> Group Orders</span>
@@ -776,8 +626,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
       <div class="product-grid">
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-tshirt"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-polo.svg" alt="Custom polo shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-paint-brush"></i> Made Just for You</span>
@@ -794,8 +644,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-church"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-polo.svg" alt="Church and ministry polo shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-cross"></i> Faith Collection</span>
@@ -812,8 +662,8 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
         </div>
 
         <div class="product-card">
-          <div class="product-image-placeholder">
-            <i class="fas fa-briefcase"></i>
+          <div class="product-img-wrap">
+            <img src="assets/images/placeholder-polo.svg" alt="Business logo polo shirt" class="product-img" loading="lazy" />
           </div>
           <div class="product-info">
             <span class="custom-badge"><i class="fas fa-star"></i> Business Ready</span>
@@ -914,7 +764,6 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
     </div>
   </section>
 
-  <!-- ========== BOTTOM CTA ========== -->
   <section id="shop-cta">
     <div class="container">
       <div class="cta-banner">
@@ -926,7 +775,6 @@ STEP COMPLETEYou said: write the whole shop.write the whole sh
     </div>
   </section>
 
-  <!-- ========== FOOTER ========== -->
   <footer id="main-footer">
     <div class="container">
       <div class="footer-grid">
