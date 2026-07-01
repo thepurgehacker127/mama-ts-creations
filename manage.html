@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Site Updates | Mama T's Creations</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png" />
+</head>
+
+<body>
+
+  <header id="main-header">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="index.html"><span class="logo-text">Mama T's Creations</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <p class="hero-accent">For Mama T Only</p>
+      <h1>Request a Site Update</h1>
+      <p>Use this form any time you want to add, change, or remove something on your website. I'll review and update the live site, usually within 24–48 hours.</p>
+    </div>
+  </section>
+
+  <section id="order-form-section">
+    <div class="container">
+      <div class="form-wrapper">
+
+        <form
+          class="order-form"
+          action="https://formspree.io/f/xpqgyawb"
+          method="POST"
+          enctype="multipart/form-data"
+        >
+          <input type="hidden" name="_subject" value="Site Update Request — Mama T's Creations" />
+          <input type="hidden" name="_next" value="thank-you.html" />
+
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-tasks"></i> What do you need?</legend>
+
+            <div class="form-group">
+              <label for="request-type">Type of Request <span class="required-star">*</span></label>
+              <select id="request-type" name="request_type" required>
+                <option value="" disabled selected>— Select one —</option>
+                <option value="Add a New Product">Add a New Product</option>
+                <option value="Remove a Product">Remove a Product</option>
+                <option value="Change a Price">Change a Price</option>
+                <option value="Update a Description">Update a Description</option>
+                <option value="Replace a Photo">Replace a Photo</option>
+                <option value="Update Contact Info">Update Contact Info</option>
+                <option value="Other Change">Other Change</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-edit"></i> Tell Me the Details</legend>
+
+            <div class="form-group">
+              <label for="product-name">Product Name (if applicable)</label>
+              <input type="text" id="product-name" name="product_name" placeholder="e.g. Custom Hat, Coffee Cup" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="new-price">New Price (if applicable)</label>
+                <input type="text" id="new-price" name="new_price" placeholder="e.g. $25" />
+              </div>
+              <div class="form-group">
+                <label for="category">Category (if applicable)</label>
+                <select id="category" name="category">
+                  <option value="" disabled selected>— Select category —</option>
+                  <option value="T-Shirts">T-Shirts</option>
+                  <option value="Drinkware">Drinkware</option>
+                  <option value="Hats">Hats</option>
+                  <option value="Plates">Plates</option>
+                  <option value="Socks">Socks</option>
+                  <option value="Bags">Bags</option>
+                  <option value="Polo Shirts">Polo Shirts</option>
+                  <option value="Other / New Category">Other / New Category</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Full Details / Description <span class="required-star">*</span></label>
+              <textarea
+                id="description"
+                name="description"
+                rows="5"
+                placeholder="Describe exactly what you want changed. Example: 'Add a new product called Custom Ornaments for $12, category Seasonal, description: hand painted glass ornaments personalized with name and date.'"
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="photo-upload">Upload a Photo (if adding/replacing a product photo)</label>
+              <input type="file" id="photo-upload" name="photo" accept="image/*" />
+              <p class="field-hint">JPG or PNG, under 10MB. You can upload more than one by submitting this form again.</p>
+            </div>
+
+          </fieldset>
+
+          <fieldset class="form-fieldset">
+            <legend><i class="fas fa-clock"></i> Timing</legend>
+
+            <div class="form-group">
+              <label for="urgency">How soon do you need this?</label>
+              <select id="urgency" name="urgency">
+                <option value="No Rush">No rush — whenever you get to it</option>
+                <option value="This Week">This week</option>
+                <option value="Urgent">Urgent — please prioritize</option>
+              </select>
+            </div>
+
+          </fieldset>
+
+          <div class="form-submit">
+            <p class="form-note">
+              <i class="fas fa-lock"></i>
+              This form goes directly to Bam. Changes are typically live within 24–48 hours.
+            </p>
+            <button type="submit" class="btn btn-primary btn-large">
+              <i class="fas fa-paper-plane"></i> Send Update Request
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <footer id="main-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>&copy; 2025 Mama T's Creations. Private update page — not for customer use.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
