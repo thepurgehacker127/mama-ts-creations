@@ -151,3 +151,43 @@ if (filterBtns.length && shopSections.length) {
     });
   });
 }
+
+/* ========== FAQ ACCORDION ========== */
+// Opens/closes FAQ answers when a question is clicked.
+// Only one answer stays open at a time.
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+  question.addEventListener('click', () => {
+    const answer = question.nextElementSibling;
+    const isOpen = question.classList.contains('open');
+
+    faqQuestions.forEach(q => {
+      q.classList.remove('open');
+      q.nextElementSibling.classList.remove('open');
+    });
+
+    if (!isOpen) {
+      question.classList.add('open');
+      answer.classList.add('open');
+    }
+  });
+});
+
+/* ========== STITCH DIVIDER SCROLL ANIMATION ========== */
+// Plays the "thread being sewn" draw-in animation once,
+// the first time each divider scrolls into view.
+const stitchDividers = document.querySelectorAll('.stitch-divider');
+
+if (stitchDividers.length) {
+  const stitchObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('stitch-animate');
+        stitchObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  stitchDividers.forEach(el => stitchObserver.observe(el));
+}
