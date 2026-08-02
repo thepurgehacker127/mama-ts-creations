@@ -73,6 +73,24 @@ ul {
   list-style: none;
 }
 
+/* ========== SKIP LINK ========== */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  z-index: 2000;
+}
+
+.skip-link:focus {
+  left: 24px;
+  top: 24px;
+  background: var(--soft-navy);
+  color: var(--soft-white);
+  padding: 12px 16px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(13, 59, 102, 0.2);
+}
+
 /* ========== CONTAINER ========== */
 .container {
   max-width: var(--container-max);

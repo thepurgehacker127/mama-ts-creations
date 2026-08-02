@@ -8,29 +8,34 @@
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
+const setMenuState = (isOpen) => {
+  if (!navLinks || !navToggle) return;
+
+  navLinks.classList.toggle('open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+
+  const icon = navToggle.querySelector('i');
+  if (!icon) return;
+
+  if (isOpen) {
+    icon.classList.remove('fa-bars');
+    icon.classList.add('fa-xmark');
+  } else {
+    icon.classList.remove('fa-xmark');
+    icon.classList.add('fa-bars');
+  }
+};
+
 // When the hamburger button is clicked, open or close the menu
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-
-    // Swap the icon between bars (closed) and X (open)
-    const icon = navToggle.querySelector('i');
-    if (navLinks.classList.contains('open')) {
-      icon.classList.remove('fa-bars');
-      icon.classList.add('fa-xmark');
-    } else {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
-    }
+    setMenuState(!navLinks.classList.contains('open'));
   });
 
   // Close the mobile menu if user clicks any nav link
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      const icon = navToggle.querySelector('i');
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
+      setMenuState(false);
     });
   });
 }
@@ -43,12 +48,14 @@ document.addEventListener('click', (e) => {
     !navLinks.contains(e.target) &&
     !navToggle.contains(e.target)
   ) {
-    navLinks.classList.remove('open');
-    const icon = navToggle.querySelector('i');
-    if (icon) {
-      icon.classList.remove('fa-xmark');
-      icon.classList.add('fa-bars');
-    }
+    setMenuState(false);
+  }
+});
+
+/* ========== CLOSE MENU WITH ESCAPE KEY ========== */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    setMenuState(false);
   }
 });
 
@@ -83,21 +90,23 @@ const revealElements = document.querySelectorAll(
   '.category-card, .process-step, .mission-content, .footer-grid'
 );
 
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target); // Only animate once
-    }
+if (typeof IntersectionObserver !== 'undefined' && revealElements.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target); // Only animate once
+      }
+    });
+  }, {
+    threshold: 0.12
   });
-}, {
-  threshold: 0.12
-});
 
-revealElements.forEach(el => {
-  el.classList.add('reveal');
-  revealObserver.observe(el);
-});
+  revealElements.forEach(el => {
+    el.classList.add('reveal');
+    revealObserver.observe(el);
+  });
+}
 
 /* ========== CURRENT YEAR IN FOOTER ========== */
 // Automatically keeps the copyright year up to date
@@ -108,6 +117,7 @@ if (yearEl) {
     new Date().getFullYear()
   );
 }
+
 /* ========== SMOOTH BACK TO TOP ========== */
 // Creates a back-to-top button that appears when scrolling down
 const backToTop = document.createElement('button');
