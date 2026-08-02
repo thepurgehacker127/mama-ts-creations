@@ -2652,3 +2652,17 @@ textarea:focus-visible {
     opacity: 0.5;
   }
 }
+.meet-maker-photo-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center 20%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--card-shadow);
+}
+
+@media (max-width: 768px) {
+  .meet-maker-photo-img {
+    height: 240px;
+  }
+}
