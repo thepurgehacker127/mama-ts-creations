@@ -87,6 +87,20 @@ ul {
   color: var(--soft-navy);
   text-align: center;
   margin-bottom: 12px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--warm-gold));
 }
 
 .section-subtitle {
@@ -122,7 +136,7 @@ ul {
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--warm-gold), var(--gold));
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.38);
 }
 
 .btn-secondary {
@@ -147,6 +161,10 @@ ul {
   background: var(--deep-blue);
   color: var(--soft-white);
   transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 /* ============================================
@@ -536,6 +554,13 @@ ul {
   text-align: center;
   transition: var(--transition);
   border: 1px solid var(--border-light);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .category-card:hover {
@@ -589,6 +614,13 @@ ul {
   position: relative;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .process-step:hover {
@@ -850,6 +882,7 @@ ul {
 #main-header.scrolled {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
+
 /* ============================================
    PAGE HERO BANNER (inner pages)
 ============================================ */
@@ -969,6 +1002,13 @@ ul {
   box-shadow: var(--card-shadow);
   transition: var(--transition);
   border: 1px solid var(--border-light);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .product-card:hover {
@@ -1067,6 +1107,7 @@ ul {
 .cta-banner .hero-accent {
   font-size: 1.6rem;
 }
+
 /* ============================================
    CUSTOM ORDER PAGE — MINI STEPS
 ============================================ */
@@ -1167,6 +1208,13 @@ ul {
   padding: 28px;
   margin-bottom: 24px;
   background: var(--cloud-gray);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .form-fieldset legend {
@@ -1347,8 +1395,9 @@ ul {
     max-width: 100%;
   }
 }
+
 /* ============================================
-   ABOUT PAGE
+   ABOUT PAGE — FULL SIZE PHOTO DISPLAY
 ============================================ */
 #about-story {
   padding: var(--section-padding);
@@ -1362,28 +1411,66 @@ ul {
   align-items: center;
 }
 
+/* Photo container — full size display */
 .about-image-placeholder {
-  background: linear-gradient(135deg, #e8f4fd, #d0e8f8);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
   border-radius: var(--radius-lg);
-  height: 420px;
+  overflow: hidden;
+  border: 2px dashed var(--sky-blue);
+  background: linear-gradient(135deg, #e8f4fd, #d0e8f8);
+}
+
+/* Placeholder state */
+.about-image-placeholder .placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 16px;
   color: var(--deep-blue);
-  border: 2px dashed var(--sky-blue);
+  z-index: 1;
 }
 
-.about-image-placeholder i {
+.about-image-placeholder .placeholder i {
   font-size: 4rem;
   opacity: 0.4;
 }
 
-.about-image-placeholder p {
+.about-image-placeholder .placeholder p {
   font-size: 0.9rem;
   color: var(--text-muted);
   font-style: italic;
+  margin: 0;
+}
+
+/* Actual image — FULL SIZE DISPLAY */
+.about-image-placeholder img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: var(--radius-lg);
+  z-index: 2;
+}
+
+/* Hide placeholder when image is present */
+.about-image-placeholder img ~ .placeholder {
+  display: none;
+}
+
+/* Remove dashed border when image is present */
+.about-image-placeholder img {
+  border: none !important;
 }
 
 .section-label {
@@ -1410,7 +1497,20 @@ ul {
   margin-bottom: 16px;
 }
 
-/* Values */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-image-placeholder {
+    min-height: 350px;
+  }
+}
+
+/* ============================================
+   VALUES SECTION (About page)
+============================================ */
 #about-values {
   padding: var(--section-padding);
   background: var(--cloud-gray);
@@ -1429,6 +1529,13 @@ ul {
   text-align: center;
   box-shadow: var(--card-shadow);
   transition: var(--transition);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .value-card:hover {
@@ -1491,7 +1598,7 @@ ul {
   font-weight: 500;
 }
 
-/* About CTA reuses #shop-cta styles */
+/* About CTA */
 #about-cta {
   padding: var(--section-padding);
   background: linear-gradient(160deg, var(--soft-navy) 0%, #1E4976 100%);
@@ -1584,7 +1691,7 @@ ul {
   margin-bottom: 12px;
 }
 
-/* Contact form reuses order form styles */
+/* Contact form */
 .contact-form .form-group {
   margin-top: 16px;
 }
@@ -1594,6 +1701,24 @@ ul {
   border-radius: var(--radius-md);
   padding: 36px;
   border: 1px solid var(--border-light);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
+}
+
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-form-wrapper {
+    padding: 24px;
+  }
 }
 
 /* ============================================
@@ -1681,28 +1806,6 @@ ul {
 }
 
 /* ============================================
-   MOBILE — ABOUT & CONTACT
-============================================ */
-@media (max-width: 768px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-
-  .about-image-placeholder {
-    height: 260px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .contact-form-wrapper {
-    padding: 24px;
-  }
-}
-/* ============================================
    FINAL POLISH & UTILITY CLASSES
 ============================================ */
 
@@ -1776,6 +1879,7 @@ textarea:focus-visible {
     font-size: 12pt;
   }
 }
+
 /* ========== BACK TO TOP BUTTON ========== */
 .back-to-top {
   position: fixed;
@@ -1869,6 +1973,7 @@ textarea:focus-visible {
 .price-pill.best-value {
   border-color: var(--gold);
   background: linear-gradient(135deg, #fffbf0, #fff8e1);
+  position: relative;
 }
 
 .price-pill.best-value i,
@@ -1876,34 +1981,36 @@ textarea:focus-visible {
   color: var(--gold);
 }
 
+.price-pill.best-value:hover .best-value-tag {
+  transform: rotate(0deg);
+}
+
 .best-value-tag {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
   background: var(--gold);
   color: var(--soft-navy);
   font-size: 0.72rem !important;
   font-weight: 700 !important;
-  padding: 3px 10px;
-  border-radius: 50px;
+  padding: 4px 12px 4px 20px;
+  border-radius: 0;
+  clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
+  transform: rotate(-2.5deg);
+  transition: transform 0.25s ease;
 }
 
-/* ============================================
-   FEATURED PRODUCT CARD
-============================================ */
-.product-card-featured {
-  border: 2px solid var(--gold) !important;
-  position: relative;
-}
-
-.product-featured-ribbon {
+.best-value-tag::before {
+  content: '';
   position: absolute;
-  top: 14px;
-  right: -1px;
-  background: linear-gradient(135deg, var(--gold), var(--warm-gold));
-  color: var(--soft-navy);
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 5px 14px;
-  border-radius: 4px 0 0 4px;
-  letter-spacing: 0.5px;
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--soft-navy);
+  opacity: 0.45;
 }
 
 .price-note {
@@ -2047,6 +2154,13 @@ textarea:focus-visible {
   border: 1px solid var(--border-light);
   transition: var(--transition);
   position: relative;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .price-snap-card:hover {
@@ -2079,7 +2193,7 @@ textarea:focus-visible {
 
 .featured-snap {
   border: 2px solid var(--gold) !important;
-  background: linear-gradient(135deg, #fffbf0, #fff8e1);
+  background: linear-gradient(135deg, #fffbf0, #fff8e1) !important;
 }
 
 .featured-snap i,
@@ -2154,6 +2268,13 @@ textarea:focus-visible {
   margin-bottom: 10px;
   overflow: hidden;
   background: var(--soft-white);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(13, 59, 102, 0.02) 0px,
+    rgba(13, 59, 102, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }
 
 .faq-question {
@@ -2229,6 +2350,8 @@ textarea:focus-visible {
   font-size: clamp(1.8rem, 3vw, 2.4rem);
   color: var(--soft-white);
   margin-bottom: 12px;
+  border: none;
+  padding: 0;
 }
 
 .faq-cta p {
@@ -2394,70 +2517,9 @@ textarea:focus-visible {
   font-family: var(--font-heading);
 }
 
-/* ============================================================
-   PREMIUM SIGNATURE SYSTEM
-   Language: the physical craft of the products themselves —
-   stitching, fabric tags, hand-finished seams. Used with
-   restraint at section boundaries and on price/value badges,
-   not scattered everywhere.
-================================================================ */
-
-/* ---------- Refined button hover (lift + warm glow, no gimmicks) ---------- */
-.btn-primary:hover {
-  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.38);
-}
-
-.btn:active {
-  transform: translateY(0) scale(0.98);
-}
-
-/* ---------- Section title gold accent ---------- */
-.section-title {
-  position: relative;
-  padding-bottom: 16px;
-}
-
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 56px;
-  height: 3px;
-  border-radius: 3px;
-  background: linear-gradient(90deg, var(--gold), var(--warm-gold));
-}
-
-/* ---------- Eyebrow / kicker label ---------- */
-.eyebrow-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 14px;
-}
-
-.eyebrow-tag i {
-  font-size: 0.72rem;
-}
-
-.eyebrow-tag::after {
-  content: '';
-  width: 30px;
-  height: 1px;
-  background: var(--gold);
-  opacity: 0.55;
-}
-
-/* ---------- Stitched seam divider ----------
-   A dashed thread line with a small circular
-   medallion — marks a transition the way a seam
-   marks where two pieces of fabric are joined. */
+/* ============================================
+   STITCHED SEAM DIVIDER
+============================================ */
 .stitch-divider {
   position: relative;
   height: 48px;
@@ -2524,63 +2586,43 @@ textarea:focus-visible {
   color: var(--warm-gold);
 }
 
-/* ---------- Swing tag (Best Value badge) ----------
-   Reshapes the existing .best-value-tag into a real
-   garment price-tag silhouette: notched left edge and
-   a small punch-hole, tied to the apparel the site sells. */
-.best-value-tag {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  background: var(--gold);
-  color: var(--soft-navy);
-  font-size: 0.72rem !important;
-  font-weight: 700 !important;
-  padding: 4px 12px 4px 20px;
-  border-radius: 0;
-  clip-path: polygon(12px 0, 100% 0, 100% 100%, 12px 100%, 0 50%);
-  transform: rotate(-2.5deg);
-  transition: transform 0.25s ease;
-}
-
-.best-value-tag::before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3px;
-  height: 3px;
-  border-radius: 50%;
-  background: var(--soft-navy);
-  opacity: 0.45;
-}
-
-.price-pill.best-value:hover .best-value-tag {
-  transform: rotate(0deg);
-}
-
-/* ---------- Subtle woven-canvas card texture ----------
-   Applied on top of existing card backgrounds without
-   disturbing their colors — pure texture, very low opacity. */
-.category-card,
-.value-card,
-.process-step,
-.price-snap-card,
-.product-card,
-.form-fieldset,
-.faq-item {
-  background-image: repeating-linear-gradient(
-    45deg,
-    rgba(13, 59, 102, 0.02) 0px,
-    rgba(13, 59, 102, 0.02) 1px,
-    transparent 1px,
-    transparent 8px
-  );
+@media (prefers-reduced-motion: reduce) {
+  .stitch-divider.stitch-animate .stitch-line {
+    animation: none;
+    stroke-dashoffset: 0;
+    opacity: 0.5;
+  }
 }
 
 /* ============================================
-   MEET THE MAKER (Homepage)
+   EYEBROW / KICKER LABEL
+============================================ */
+.eyebrow-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.eyebrow-tag i {
+  font-size: 0.72rem;
+}
+
+.eyebrow-tag::after {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--gold);
+  opacity: 0.55;
+}
+
+/* ============================================
+   MEET THE MAKER (Homepage) — FULL SIZE PHOTO
 ============================================ */
 #meet-maker {
   padding: var(--section-padding);
@@ -2594,29 +2636,60 @@ textarea:focus-visible {
   align-items: center;
 }
 
+/* Photo container — full size */
 .meet-maker-photo-frame {
-  background: linear-gradient(135deg, #e8f4fd, #d0e8f8);
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 480px;
   border-radius: var(--radius-lg);
-  height: 320px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: linear-gradient(135deg, #e8f4fd, #d0e8f8);
+}
+
+/* Placeholder state */
+.meet-maker-photo-frame .placeholder {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
   color: var(--deep-blue);
-  border: 2px dashed var(--sky-blue);
+  z-index: 1;
 }
 
-.meet-maker-photo-frame i {
+.meet-maker-photo-frame .placeholder i {
   font-size: 3rem;
   opacity: 0.4;
 }
 
-.meet-maker-photo-frame p {
+.meet-maker-photo-frame .placeholder p {
   font-size: 0.85rem;
   color: var(--text-muted);
   font-style: italic;
   margin: 0;
+}
+
+/* Actual image — FULL SIZE DISPLAY */
+.meet-maker-photo-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  z-index: 2;
+}
+
+/* Hide placeholder when image is present */
+.meet-maker-photo-frame img ~ .placeholder {
+  display: none;
 }
 
 .meet-maker-text h2 {
@@ -2640,29 +2713,6 @@ textarea:focus-visible {
   }
 
   .meet-maker-photo-frame {
-    height: 240px;
-  }
-}
-
-/* ---------- Respect reduced motion ---------- */
-@media (prefers-reduced-motion: reduce) {
-  .stitch-divider.stitch-animate .stitch-line {
-    animation: none;
-    stroke-dashoffset: 0;
-    opacity: 0.5;
-  }
-}
-.meet-maker-photo-img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  object-position: center 20%;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--card-shadow);
-}
-
-@media (max-width: 768px) {
-  .meet-maker-photo-img {
-    height: 240px;
+    min-height: 340px;
   }
 }
